@@ -1,6 +1,7 @@
 library(tidyverse)
 library(janitor)
 library(here)
+library(readr)
 
 library(skimr)
 
@@ -36,3 +37,4 @@ skim(clean_data)
 
 levels(clean_data$PBM)
 
+write_csv(clean_data, here("data", "processed", "cleaned_data.csv"))
